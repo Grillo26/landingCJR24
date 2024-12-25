@@ -388,14 +388,17 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url(../img/hero-bg.png) top center;
+  /*background: url(../img/hero-bg.jpg) top center;*/
+  background-color: black;
   background-size: cover;
   position: relative;
 }
 
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
+   
   }
 }
 
@@ -560,9 +563,29 @@ section {
 }
 
 #about .about-container .background {
-  min-height: 300px;
-  background: url(../img/about-img.jpg) center top no-repeat;
+  min-height: 400px;
+  background: url(../img/min/team.jpg) center top no-repeat;
+  background-size: cover; /* Asegura que la imagen cubra el contenedor */
   margin-bottom: 10px;
+  border-radius: 30px;
+}
+
+/* Adaptaciones para dispositivos móviles */
+@media (max-width: 768px) { /* Para pantallas pequeñas (tablets y móviles) */
+  #about .about-container .background {
+    background-position: center center; /* Centra la imagen en dispositivos más pequeños */
+    min-height: 300px; /* Ajusta el alto mínimo según sea necesario */
+    border-radius: 30px; /* Reduce el radio del borde para un diseño más limpio */
+  }
+}
+
+@media (max-width: 480px) { /* Para pantallas muy pequeñas (teléfonos) */
+  #about .about-container .background {
+    min-height: 250px; /* Reduce aún más el alto mínimo */
+    background-size: contain; /* Ajusta la imagen completa sin recortar */
+    border-radius: 20px;
+
+  }
 }
 
 #about .about-container .content {
@@ -740,7 +763,7 @@ section {
 /* Call To Action Section
 --------------------------------*/
 #call-to-action {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/call-to-action-bg.jpg) fixed center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/min/foto1.jpg) fixed center center;
   background-size: cover;
   padding: 80px 0;
 }
