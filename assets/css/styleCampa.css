@@ -388,7 +388,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  /*background: url(../img/hero-bg.jpg) top center;*/
+  background: url(../img/min/hero.jpg) top center;
   background-color: black;
   background-size: cover;
   position: relative;
@@ -804,7 +804,7 @@ section {
 }
 
 @media (min-width: 769px) {
-  #call-to-action .cta-btn-container {
+  #call-to-action .hero-container {
     display: flex;
     align-items: center;
     justify-content: flex-end;
